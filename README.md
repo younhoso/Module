@@ -1,6 +1,6 @@
 # TRIPLEXLAB CSS / Scss 스타일 가이드
 
-> **TRIPLEXLAB**은 다음과 같은 사실을 명확히 숙지하고 걔발을 시작합니다.
+> **TRIPLEXLAB**은 다음과 같은 사실을 명확히 숙지하고 개발을 시작합니다.
 
 ## 목차
 1. [CSS](#css )- [형식](#형식) - [주석](#주석) - [OOCSS와 BEM](#oocss와-bem) - [ID 선택자](#id-선택자) - [자바스크립트 훅](#자바스크립트-훅) - [Border](#border)
