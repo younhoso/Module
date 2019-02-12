@@ -1,0 +1,58 @@
+.Content__L--Main {
+  height: 843px;
+  .Content__L--Half {
+    border: 1px solid red;
+    &:last-child {
+      height: 843px;
+      background: unset;
+    }
+
+    .skills {
+      li{
+        position: relative;
+        margin-bottom: 32px;
+        padding-left: 6px;
+
+        .bar-container,
+        .bar {	
+          position: absolute;
+          left: 0;
+          height: 5px;	
+          border-radius: 5px;
+          content: "";
+        }
+        .bar-container {
+          width: 100%;
+          bottom: -8px;
+          background-color: rgb(172, 172, 172);
+          text-align: right;
+
+          .bar {
+            top: 0;
+          }
+          .pct {
+            position: absolute;
+            top: -19px;
+            right: 0;
+            opacity: 0;
+            transition: opacity 0.3s linear;
+          }
+        }
+      }      
+    }
+  }
+}
+
+@media #{$tablet}{
+  .Content__L--Main {
+    .Content__L--Half {
+      &:last-child {
+        background: url('../images/pc1.png')no-repeat center center;
+        background-size: cover;
+        img {
+          display: none;
+        }
+      }
+    }
+  }
+}

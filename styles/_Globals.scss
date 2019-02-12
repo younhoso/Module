@@ -1,0 +1,72 @@
+/**반응형 SYSTEM 일때 사용 전역변수로 관리한다.*/
+$tablet: "(min-width: 768px)";
+$desktop: "(min-width: 1024px)";
+
+/**========= 접두어 SYSTEM ========= */
+@mixin vendorPrefix($property, $value:null, $value2:null, $value3:null, $value4:null) {
+    @each $prefix in -webkit-, -moz-, -ms-, -o-, '' {
+        #{$prefix}#{$property}: $value $value2 $value3 $value4;
+    }
+}
+
+@mixin vendorPrefix-Use($property, $args...) {
+    @include vendorPrefix($property, $args...)
+}
+
+/**========= opacity SYSTEM ========= */
+@mixin opacity($opacity) {
+    opacity: $opacity; /* 모든 최신 브라우저 */
+    $opacityIE: $opacity * 100;
+    filter: alpha(opacity=$opacityIE); /* IE5 ~ IE9 위함 */
+}
+
+/**========= display ========= */
+.inline-block{display: inline-block;}
+
+/**========= 이미지 썸네일 ========= */
+.thumb {width: 100%; height: auto; display: block;}
+
+/**========= TITLE font-size SYSTEM ========= */
+html {font-size: 10px;}
+p,li,td,th,strong { /*본문글씨 기본 크기 16px*/
+  font-size: 1.6rem;
+  font-weight: normal;
+  vertical-align: top;
+  letter-spacing: -0.025em;
+}
+p,td {line-height: 1.6;}
+[class*="tit_"]{ 
+    color: #333; 
+    line-height:1.4;
+}
+@for $i from 11 through 60 {
+    // 최신 브라우저 단에서 폰트 사이즈 10px이하는 안먹는다.
+    $fontsize: 0.1 * $i; 
+    .tit_#{$i}{
+        font-size: #{$fontsize + 0rem};
+    }
+}
+
+/*========= 수직정렬 SYSTEM(신버전) IE9 포함 안함=========*/
+.valign-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+} 
+
+/*========= 수직정렬 SYSTEM(구버전 table) =========*/
+.height--100        {height: 100%;} //display_table 직개 부모가 height: 100%; 되어야만 수직 정렬가능하다.
+.display_table      {width: auto; height: 100%; display: table;} /*직개부모 관계*/
+.vertical_top       {display: table-cell;vertical-align: top;} /*직개자식 관계*/
+.vertical_center    {display: table-cell;vertical-align: middle;} /*직개자식 관계*/
+.vertical_bottom    {display: table-cell;vertical-align: bottom;} /*직개자식 관계*/
+
+/*========= 수직정렬 SYSTEM(간단히 직개자식이 display: inline-block;일때 직개부모가 수직을 컨트롤 할수 있다.) =========*/
+.vertical-to > *      {vertical-align: top;}
+.vertical-center > *  {vertical-align: middle;}
+.vertical-bottom > *  {vertical-align: bottom;}

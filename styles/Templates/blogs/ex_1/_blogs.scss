@@ -1,0 +1,37 @@
+
+  .box {
+    &.box__div--img{
+      width: 100%;
+    }
+    &.box__div--text {
+      width: 100%;
+    }
+  }
+
+
+@media #{$tablet}{ 
+  .box {
+    &.box__div--img{
+      width: 63%;
+    }
+    &.box__div--text {
+      width: 45%;
+      position: absolute;
+      top: 115px;
+      bottom: 115px;
+      right: 70px;
+      padding: 50px;
+      box-sizing: border-box;
+      background-color:#eee;
+      .box__p {
+        padding-bottom: 20px;
+        letter-spacing: -0.025em;
+        &.box__p:last-child {
+          padding-bottom: unset;
+        }
+      }
+    }
+  }
+
+}
+

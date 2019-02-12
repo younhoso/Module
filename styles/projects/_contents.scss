@@ -1,0 +1,139 @@
+/**반응형 SYSTEM 일때 사용 전역변수로 관리한다.*/
+$tablet: "(min-width: 768px)";
+$desktop: "(min-width: 1024px)";
+
+// 모바일 카드 디자인
+.UiGuide__Content {
+    .Content__L--Main {
+        .container {
+            border: 1px solid nth($grey-light, 5);
+            box-sizing: border-box;
+            margin-left: unset;
+            margin-right: unset;
+            position: relative;
+            &:last-child{
+                margin-left: unset;
+                margin-right: unset;
+            }
+            .container__box--inner {
+                padding: 20px 0;
+                .container__box {
+                    width: 150px;
+                    float: right;
+                }
+                p.tit_26 {
+                    font-weight: 600;
+                    line-height: 1.2;
+                    overflow: hidden;
+                }
+                .container__box--list {
+                    margin-top: 25px;
+                    margin-bottom: 25px;
+                    color: nth($grey-dark, 2);
+                    li:nth-child(1) {
+                        width: 30px;
+                        border-radius: 20px;
+                        padding: 4px 20px;
+                        background-color: nth($point-red, 1);
+                        color: nth($grey-light, 1);
+                        text-align: center;
+                    }
+                    li {
+                        font-size: 14px;
+                        margin: 6px 0 0 0;
+                    }
+                }
+                .container__box--link {
+                    height: 40px;
+                    line-height: 40px;
+                    text-align: center;
+                    border-radius: 20px;
+                    color: nth($grey-light, 2);
+                    background-color: nth($point-red, 1);
+                    a {
+                        width: 100%;
+                    }
+                }
+            }
+            .box__effect {
+                .effect{
+                    display: inline-block;
+                    box-sizing: border-box;
+                    background-color: nth($point-red, 2);
+                    position: absolute;
+                    transition: all 0.2s ease-in-out;
+                }
+                .effect:nth-child(odd) {
+                    width: 0;
+                    height: 1px;
+                }
+                .effect:nth-child(even) {
+                    width: 1px;
+                    height: 0;
+                }
+                .effect:nth-child(1) {
+                    top: 0;
+                    left: 0;
+                }
+                .effect:nth-child(2) {
+                    top: 0;
+                    right: 0;
+                }
+                .effect:nth-child(3) {
+                    right: 0;
+                    bottom: 0;
+                }
+                .effect:nth-child(4) {
+                    bottom: 0;
+                    left: 0;
+                }
+            }
+        }
+        .container:hover {
+            border: 1px solid transparent;
+            .box__effect {
+                .effect:nth-child(odd) {
+                    width: 100%;
+                }
+                .effect:nth-child(even) {
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+// // 모바일 카드 디자인 끝
+// tablet 카드 디자인
+@media #{$tablet}{
+    .UiGuide__Content {
+        .Content__L--Main {
+            .container {
+                margin-left: 10px;
+                margin-right: 10px;
+                &:last-child{
+                    margin-left: unset;
+                    margin-right: unset;
+                }
+            }
+        }
+    }
+}
+// tablet 카드 디자인 끝
+
+
+// PC 카드 디자인
+@media #{$desktop}{
+    .UiGuide__Content {
+        .Content__L--Main {
+            .container {
+                margin-left: 10px;
+                margin-right: 10px;
+                &:last-child{
+                    margin-left: 10px;
+                    margin-right: unset;
+                }
+            }
+        }
+    }
+}
+// PC 카드 디자인 끝

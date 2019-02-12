@@ -1,0 +1,60 @@
+/* ========= Media Query Ranges ========= */
+$small: 320px !default;
+$medium: 768px !default;
+$large: 1024px !default;
+
+$small-and-up: "only screen and (min-width : #{$small})" !default;
+$medium-and-up: "only screen and (min-width : #{$medium})" !default;
+$large-and-up: "only screen and (min-width : #{$large})" !default;
+
+/*========= l_col SYSTEM FLOAT RELIEVE =========*/
+.clearfix:after{content: "";display: block;clear: both;}
+.clear         {clear: both;}
+
+/* ========= l_col SYSTEM ========= */
+[class*="col"] {
+    float: left;
+    padding: 0 10px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+} 
+
+/* ========= Small col SYSTEM ========= */
+@media #{$small-and-up} {
+  $breakpoints: (S:320);
+  $grid-columns: 12; /*=== 12단 그리드 시스템 (여기서는 반복횟수 및 나누기 연산 목적) ===*/
+
+  @for $i from 1 through $grid-columns {
+    @each $key, $value in $breakpoints {
+      .col_#{$key}-#{$i} { width: (100% / $grid-columns) * $i }
+    }
+  }
+} 
+
+/* ========= Medium col SYSTEM ========= */
+@media #{$medium-and-up} {
+  $breakpoints: (M:768);
+  $grid-columns: 12; /*=== 12단 그리드 시스템 (여기서는 반복횟수 및 나누기 연산 목적) ===*/
+
+  @for $i from 1 through $grid-columns {
+    @each $key, $value in $breakpoints {
+      .col_#{$key}-#{$i} { width: (100% / $grid-columns) * $i }
+    }
+  }
+}
+
+/* ========= Large col SYSTEM ========= */
+@media #{$large-and-up} {
+  $breakpoints: (L:1024);
+  $grid-columns: 12; /*=== 12단 그리드 시스템 (여기서는 반복횟수 및 나누기 연산 목적) ===*/
+  .col_L_23{width:23%;}
+
+  @for $i from 1 through $grid-columns {
+    @each $key, $value in $breakpoints {
+      .col_#{$key}-#{$i} { width: (100% / $grid-columns) * $i }
+    }
+  }
+}
+
+
+ 

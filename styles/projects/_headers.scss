@@ -1,0 +1,138 @@
+/**반응형 SYSTEM 일때 사용 전역변수로 관리한다.*/
+$mobile: "(min-width: 320px)";
+$tablet: "(min-width: 768px)";
+$desktop: "(min-width: 1024px)";
+
+// header PC ex_1
+.header {
+    width: 60px;
+    height: 100%;
+    background: url('../images/download.jpg')no-repeat center center;
+    background-size: cover;
+    box-shadow: -2px 0 18px #eee;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: block;
+    z-index: 9;
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+   
+    .header__owner {
+        height: 70px;
+        line-height: 70px;
+        overflow: hidden;
+        .header__owner--img {
+            width: 50px;
+            padding: 0 5px;
+        }
+        .header__owner--tit {
+            font-size: 18px;
+            color: nth($grey-light, 1);
+            padding-left: 10px;
+            display: inline-block;
+            opacity: 0;
+        }
+    }
+    .header__menu {
+        position: relative;
+        .header__hover {
+            height: 48px;
+            overflow: hidden;
+            text-align: left;
+            position: relative;
+        }
+        .header__search{
+            a {
+                font-size: 18px;
+                padding: 15px;
+                color: nth($grey-light, 1);
+            }
+            .header--text {
+                a {
+                    display: none;
+                }    
+            }
+        }
+        .header__empty{
+            a {
+                font-size: 18px;
+                padding: 15px;
+                color: nth($grey-light, 1);
+            }
+            .header--text {
+                a {
+                    display: none;
+                }   
+            }
+        }
+        .bar__line{
+            display: inline-block;
+            width: 3px;
+            height: 24px;
+            background-color: $point-Aquamarine;
+            position: absolute;
+            top: 12px;
+            left: 0;
+        }
+    }
+    .header__sns {
+        position: absolute;
+        bottom: 0;
+        .header__sns--inner{
+            height: 58px;
+            overflow: hidden;
+            text-align: left;
+            a {
+                font-size: 18px;
+                padding: 15px;
+                color: nth($grey-light, 1);
+            }
+        }
+    }
+    &.active{
+        width: 350px;
+        .header__search {
+            text-align: left;
+        }
+    }
+}
+// header PC ex_1 끝
+
+
+
+.Acard {
+    position: absolute;
+    top: 20px;
+    left: 60px;
+    padding: 30px;
+    background: nth($grey-light, 4);
+    border-radius: 10px;
+    border: 1px solid nth($point-red, 1);
+
+    &.Acard--featured {
+        background: nth($point-red, 1);
+    
+        .Acard__title {
+            font-size: 20px;
+        }
+        .Acard__text {
+            font-size: 16px;
+
+            &.Acard__text--secondary {
+                color: nth($grey-light, 7);
+            }
+        }
+        .Acard__button {
+            font-size: 12px;
+            float: right;
+            display: inline-block;
+            border: 1px solid nth($point-red, 1);
+            border-radius: 10px;
+            a {
+                padding: 10px;
+            }
+        }
+    }
+}
