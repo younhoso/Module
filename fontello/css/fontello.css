@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'fontello';
-  src: url('../font/fontello.eot?84603178');
-  src: url('../font/fontello.eot?84603178#iefix') format('embedded-opentype'),
-       url('../font/fontello.woff2?84603178') format('woff2'),
-       url('../font/fontello.woff?84603178') format('woff'),
-       url('../font/fontello.ttf?84603178') format('truetype'),
-       url('../font/fontello.svg?84603178#fontello') format('svg');
+  src: url('../font/fontello.eot?74895008');
+  src: url('../font/fontello.eot?74895008#iefix') format('embedded-opentype'),
+       url('../font/fontello.woff2?74895008') format('woff2'),
+       url('../font/fontello.woff?74895008') format('woff'),
+       url('../font/fontello.ttf?74895008') format('truetype'),
+       url('../font/fontello.svg?74895008#fontello') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -15,7 +15,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'fontello';
-    src: url('../font/fontello.svg?84603178#fontello') format('svg');
+    src: url('../font/fontello.svg?74895008#fontello') format('svg');
   }
 }
 */
@@ -70,11 +70,16 @@
 .icon-resize-full:before { content: '\e80c'; } /* '' */
 .icon-download-alt:before { content: '\e80d'; } /* '' */
 .icon-share:before { content: '\e80e'; } /* '' */
+.icon-plus:before { content: '\e80f'; } /* '' */
+.icon-minus:before { content: '\e810'; } /* '' */
+.icon-plus-circled:before { content: '\e811'; } /* '' */
+.icon-minus-circled:before { content: '\e812'; } /* '' */
 .icon-spin4:before { content: '\e834'; } /* '' */
 .icon-facebook:before { content: '\f09a'; } /* '' */
 .icon-pinterest-circled:before { content: '\f0d2'; } /* '' */
 .icon-comment-empty:before { content: '\f0e5'; } /* '' */
 .icon-github:before { content: '\f113'; } /* '' */
+.icon-youtube-play:before { content: '\f16a'; } /* '' */
 .icon-instagram:before { content: '\f16d'; } /* '' */
 .icon-dribbble:before { content: '\f17d'; } /* '' */
 .icon-git:before { content: '\f1d3'; } /* '' */

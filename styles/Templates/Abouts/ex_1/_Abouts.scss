@@ -1,7 +1,7 @@
 .Content__L--Main {
   height: 843px;
   .Content__L--Half {
-    border: 1px solid red;
+    border: 1px solid map-get($colors, Saffron);
     &:last-child {
       height: 843px;
       background: unset;
