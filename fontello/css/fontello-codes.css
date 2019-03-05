@@ -14,11 +14,16 @@
 .icon-resize-full:before { content: '\e80c'; } /* '' */
 .icon-download-alt:before { content: '\e80d'; } /* '' */
 .icon-share:before { content: '\e80e'; } /* '' */
+.icon-plus:before { content: '\e80f'; } /* '' */
+.icon-minus:before { content: '\e810'; } /* '' */
+.icon-plus-circled:before { content: '\e811'; } /* '' */
+.icon-minus-circled:before { content: '\e812'; } /* '' */
 .icon-spin4:before { content: '\e834'; } /* '' */
 .icon-facebook:before { content: '\f09a'; } /* '' */
 .icon-pinterest-circled:before { content: '\f0d2'; } /* '' */
 .icon-comment-empty:before { content: '\f0e5'; } /* '' */
 .icon-github:before { content: '\f113'; } /* '' */
+.icon-youtube-play:before { content: '\f16a'; } /* '' */
 .icon-instagram:before { content: '\f16d'; } /* '' */
 .icon-dribbble:before { content: '\f17d'; } /* '' */
 .icon-git:before { content: '\f1d3'; } /* '' */

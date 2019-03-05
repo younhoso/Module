@@ -19,7 +19,8 @@ $(document).ready(function(){
 				// .bar 하나하나를 반복 합니다.
 				$bars.each( function(index) {
 					var $bar = $( this ),
-						  $pct = $bar.find( ".pct" )
+							$pct = $bar.find( ".pct" )
+							
 					setTimeout( function() {
 						$bar.css( "background-color", data[index].color )
 							.animate({

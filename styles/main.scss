@@ -3,11 +3,16 @@
 @import '_MediaQuerys';
 @import '_ui-guides';
 @import './projects/_contents';
-@import './projects/_footers';
-@import './projects/_headers';
-@import './Templates/Abouts/ex_1/_Abouts';
-@import './Templates/blogs/ex_1/_blogs';
+@import './Templates/_Resume';
 @import './Templates/_TemplatesAll';
+@import './Templates/Abouts/ex_1/_Abouts';
+@import './Templates/Banner/ex_1/_Banner';
+@import './Templates/blogs/ex_1/_blogs';
+@import './Templates/blogs/ex_3/_blogs';
+@import './Templates/footers/ex_1/_footers';
+@import './Templates/headers/ex_1/_headers';
+@import './Templates/List/ex_1/pc/_list';
+@import './Templates/List/ex_1/mobile/_list';
 
 @include border;
 

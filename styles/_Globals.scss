@@ -26,7 +26,10 @@ $desktop: "(min-width: 1024px)";
 /**========= 이미지 썸네일 ========= */
 .thumb {width: 100%; height: auto; display: block;}
 
-/**========= TITLE font-size SYSTEM ========= */
+/**========= font-hidden ========= */
+.font-hidden {font-size: 0;color: transparent;overflow: hidden;}
+
+/**========= font-size SYSTEM ========= */
 html {font-size: 10px;}
 p,li,td,th,strong { /*본문글씨 기본 크기 16px*/
   font-size: 1.6rem;
@@ -35,17 +38,6 @@ p,li,td,th,strong { /*본문글씨 기본 크기 16px*/
   letter-spacing: -0.025em;
 }
 p,td {line-height: 1.6;}
-[class*="tit_"]{ 
-    color: #333; 
-    line-height:1.4;
-}
-@for $i from 11 through 60 {
-    // 최신 브라우저 단에서 폰트 사이즈 10px이하는 안먹는다.
-    $fontsize: 0.1 * $i; 
-    .tit_#{$i}{
-        font-size: #{$fontsize + 0rem};
-    }
-}
 
 /*========= 수직정렬 SYSTEM(신버전) IE9 포함 안함=========*/
 .valign-wrapper {
@@ -61,7 +53,7 @@ p,td {line-height: 1.6;}
 
 /*========= 수직정렬 SYSTEM(구버전 table) =========*/
 .height--100        {height: 100%;} //display_table 직개 부모가 height: 100%; 되어야만 수직 정렬가능하다.
-.display_table      {width: auto; height: 100%; display: table;} /*직개부모 관계*/
+.display_table      {width: 100%; height: 100%; display: table;} /*직개부모 관계*/
 .vertical_top       {display: table-cell;vertical-align: top;} /*직개자식 관계*/
 .vertical_center    {display: table-cell;vertical-align: middle;} /*직개자식 관계*/
 .vertical_bottom    {display: table-cell;vertical-align: bottom;} /*직개자식 관계*/

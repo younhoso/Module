@@ -13,6 +13,16 @@ module.exports = {
           test: /\.scss$/,
           use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"]
         },
+        { //babel es2015
+          test: /\.js$/,
+          include: path.resolve(__dirname, 'dist'),
+          use: {
+            loader:'babel-loader',
+            options: {
+              presets: ['es2015', {modules: false}]
+            }
+          }
+        },
         { // images
           test: /\.(png|svg|jpg|gif)$/,
           use: [
